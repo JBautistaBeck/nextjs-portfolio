@@ -1,0 +1,11 @@
+name: Footer links accessibility
+page: /
+page_path: app/page.tsx
+task: Verify footer social links are accessible
+steps:
+- Navigate to the home page
+- Scroll to the footer section
+- Verify social media links are visible
+- Click on a social media link
+- Verify it opens in a new tab or navigates to the correct destination
+expected_result: Footer social media links are clickable and navigate to correct destinations

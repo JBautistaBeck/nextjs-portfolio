@@ -1,0 +1,10 @@
+name: 404 page for non-existent routes
+page: /non-existent-route
+page_path: app/not-found.tsx
+task: Verify custom 404 page displays for invalid routes
+steps:
+- Navigate to a non-existent route (e.g., /this-page-does-not-exist)
+- Verify custom 404 page is displayed
+- Verify navigation bar is still accessible
+- Verify ability to navigate back to valid pages from the 404 page
+expected_result: Custom 404 page is displayed when navigating to non-existent routes

@@ -1,0 +1,11 @@
+name: Dark mode toggle functionality
+page: /
+page_path: app/page.tsx
+task: Verify theme switching between light and dark modes
+steps:
+- Navigate to the home page
+- Observe the current theme (light or dark)
+- Click on the theme toggle button in the navigation
+- Verify the theme changes to the opposite mode (dark or light)
+- Verify content remains visible and properly styled in the new theme
+expected_result: Site theme changes between light and dark modes when toggled

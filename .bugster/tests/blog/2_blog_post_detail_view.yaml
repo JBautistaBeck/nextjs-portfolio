@@ -1,0 +1,12 @@
+name: Blog post detail view
+page: /blog/:slug
+page_path: app/blog/[slug]/page.tsx
+task: Verify individual blog post content displays correctly
+steps:
+- Navigate to the blog page
+- Click on a specific blog post title
+- Verify redirection to the blog post detail page
+- Verify blog post title is displayed
+- Verify blog post content is displayed
+- Verify date information is displayed
+expected_result: Blog post page shows the full content of the selected article
