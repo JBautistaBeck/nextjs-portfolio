@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "timestamp": 1755797185.6223254,
+    "version": 2,
+    "git": {
+      "branch": "bugster/tests/onboarding-20250821-172621",
+      "commit": "f1175e3038a1373daa4b21b1eaa1f1351add8dbd"
+    }
+  },
+  "data": {
+    "framework": {
+      "id": "next",
+      "name": "Next.js",
+      "dir_path": "/home/bugsteruser/app/repo/"
+    },
+    "router_type": "app",
+    "stats": {
+      "fileCount": 15,
+      "routeCount": 3,
+      "apiRouteCount": 0,
+      "layoutCount": 1
+    },
+    "layouts": [
+      {
+        "name": "function",
+        "relative_file_path": "app/layout.tsx",
+        "relative_dir_path": "app",
+        "content": "import './global.css'\nimport type { Metadata } from 'next'\nimport { GeistSans } from 'geist/font/sans'\nimport { GeistMono } from 'geist/font/mono'\nimport { Navbar } from './components/nav'\nimport { Analytics } from '@vercel/analytics/react'\nimport { SpeedInsights } from '@vercel/speed-insights/next'\nimport Footer from './components/footer'\nimport { baseUrl } from './sitemap'\n\nexport const metadata: Metadata = {\n  metadataBase: new URL(baseUrl),\n  title: {\n    default: 'Next.js Portfolio Starter',\n    template: '%s | Next.js Portfolio Starter',\n  },\n  description: 'This is my portfolio.',\n  openGraph: {\n    title: 'My Portfolio',\n    description: 'This is my portfolio.',\n    url: baseUrl,\n    siteName: 'My Portfolio',\n    locale: 'en_US',\n    type: 'website',\n  },\n  robots: {\n    index: true,\n    follow: true,\n    googleBot: {\n      index: true,\n      follow: true,\n      'max-video-preview': -1,\n      'max-image-preview': 'large',\n      'max-snippet': -1,\n    },\n  },\n}\n\nconst cx = (...classes) => classes.filter(Boolean).join(' ')\n\nexport default function RootLayout({\n  children,\n}: {\n  children: React.ReactNode\n}) {\n  return (\n    <html\n      lang=\"en\"\n      className={cx(\n        'text-black bg-white dark:text-white dark:bg-black',\n        GeistSans.variable,\n        GeistMono.variable\n      )}\n    >\n      <body className=\"antialiased max-w-xl mx-4 mt-8 lg:mx-auto\">\n        <main className=\"flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0\">\n          <Navbar />\n          {children}\n          <Footer />\n          <Analytics />\n          <SpeedInsights />\n        </main>\n      </body>\n    </html>\n  )\n}\n",
+        "components": [
+          "Navbar",
+          "Analytics",
+          "SpeedInsights",
+          "Footer"
+        ]
+      }
+    ],
+    "routes": [
+      {
+        "routePath": "/blog/:slug",
+        "relativeFilePath": "app/blog/[slug]/page.tsx",
+        "layoutChain": [
+          "function"
+        ],
+        "components": [
+          "CustomMDX"
+        ],
+        "hasParams": true,
+        "hasForm": false,
+        "hooks": [],
+        "eventHandlers": [],
+        "featureFlags": []
+      },
+      {
+        "routePath": "/blog",
+        "relativeFilePath": "app/blog/page.tsx",
+        "layoutChain": [
+          "function"
+        ],
+        "components": [
+          "BlogPosts"
+        ],
+        "hasParams": false,
+        "hasForm": false,
+        "hooks": [],
+        "eventHandlers": [],
+        "featureFlags": []
+      },
+      {
+        "routePath": "/",
+        "relativeFilePath": "app/page.tsx",
+        "layoutChain": [
+          "function"
+        ],
+        "components": [
+          "BlogPosts"
+        ],
+        "hasParams": false,
+        "hasForm": false,
+        "hooks": [],
+        "eventHandlers": [],
+        "featureFlags": []
+      }
+    ],
+    "api_routes": [],
+    "all_paths": [
+      "app/blog/[slug]/page.tsx",
+      "app/blog/page.tsx",
+      "app/blog/utils.ts",
+      "app/components/footer.tsx",
+      "app/components/mdx.tsx",
+      "app/components/nav.tsx",
+      "app/components/posts.tsx",
+      "app/layout.tsx",
+      "app/not-found.tsx",
+      "app/og/route.tsx",
+      "app/page.tsx",
+      "app/robots.ts",
+      "app/rss/route.ts",
+      "app/sitemap.ts",
+      "postcss.config.js"
+    ]
+  }
+}

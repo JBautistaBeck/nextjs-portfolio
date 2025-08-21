@@ -1,0 +1,10 @@
+name: Home page loads correctly
+page: /
+page_path: app/page.tsx
+task: Verify home page loads and displays content
+steps:
+- Navigate to the home page
+- Verify navigation bar is visible
+- Verify blog posts are displayed
+- Verify footer is visible
+expected_result: Home page loads with navigation bar, blog posts list, and footer
