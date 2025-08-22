@@ -1,4 +1,5 @@
 import { BlogPosts } from 'app/components/posts'
+import Link from 'next/link'
 
 export const metadata = {
   title: 'Blog',
@@ -8,7 +9,14 @@ export const metadata = {
 export default function Page() {
   return (
     <section>
-      <h1 className="font-semibold text-2xl mb-8 tracking-tighter">My Blog</h1>
+      <div className="flex justify-between items-center mb-8">
+        <h1 className="font-semibold text-2xl tracking-tighter">Latest Articles</h1>
+        <div 
+          className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
+        >
+          View Archive →
+        </div>
+      </div>
       <BlogPosts />
     </section>
   )

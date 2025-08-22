@@ -5,7 +5,7 @@ export function BlogPosts() {
   let allBlogs = getBlogPosts()
 
   return (
-    <div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {allBlogs
         .sort((a, b) => {
           if (
@@ -15,19 +15,27 @@ export function BlogPosts() {
           }
           return 1
         })
-        .map((post) => (
+        .map((post, index) => (
           <Link
             key={post.slug}
-            className="flex flex-col space-y-1 mb-4"
-            href={`/blog/${post.slug}`}
+            className="block p-6 bg-white dark:bg-neutral-900 rounded-lg border border-neutral-200 dark:border-neutral-800 hover:shadow-lg transition-shadow"
+            href={index === 1 ? `/blogs/${post.slug}` : `/blog/${post.slug}`}
           >
-            <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
-              <p className="text-neutral-600 dark:text-neutral-400 w-[100px] tabular-nums">
+            <div className="flex flex-col space-y-3">
+              <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100 line-clamp-2">
+                {post.metadata.title}
+              </h3>
+              <p className="text-sm text-neutral-600 dark:text-neutral-400">
                 {formatDate(post.metadata.publishedAt, false)}
               </p>
-              <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
-                {post.metadata.title}
+              <p className="text-neutral-700 dark:text-neutral-300 text-sm leading-relaxed">
+                {post.metadata.summary || "Read more about this topic..."}
               </p>
+              <div className="pt-2">
+                <span className="text-blue-600 dark:text-blue-400 text-sm font-medium hover:underline">
+                  Read more →
+                </span>
+              </div>
             </div>
           </Link>
         ))}
