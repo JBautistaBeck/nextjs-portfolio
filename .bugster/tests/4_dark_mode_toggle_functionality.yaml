@@ -5,7 +5,12 @@ task: Verify theme switching between light and dark modes
 steps:
 - Navigate to the home page
 - Observe the current theme (light or dark)
+- Verify card elements have appropriate styling (bg-white in light mode, bg-gray-800
+  in dark mode)
 - Click on the theme toggle button in the navigation
 - Verify the theme changes to the opposite mode (dark or light)
-- Verify content remains visible and properly styled in the new theme
-expected_result: Site theme changes between light and dark modes when toggled
+- Verify content remains visible with proper styling in the new theme
+- Verify blue accent elements (like 'Article' tags and 'View All Articles' button)
+  adjust appropriately to the theme
+expected_result: Site theme changes between light and dark modes when toggled, with
+  proper styling applied to the new card layout and blue accent elements

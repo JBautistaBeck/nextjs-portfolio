@@ -1,11 +1,13 @@
-name: Navigation between home and blog pages
+name: Navigation between home and articles pages
 page: /
 page_path: app/page.tsx
 task: Verify navigation between main sections of the site
 steps:
 - Navigate to the home page
-- Click on the 'Blog' link in the navigation bar
-- Verify the blog page loads
+- "Click on the 'View All Articles \u2192' button"
+- Verify the articles page loads with a grid layout of posts
+- "Verify each article card has a date, 'Article' tag, title, and 'Read more \u2192\
+  ' link"
 - Click on the home link in the navigation bar
-- Verify return to the home page
-expected_result: User can navigate from home page to blog page and back
+- Verify return to the home page with 'Welcome to My Portfolio' heading
+expected_result: User can navigate from home page to articles page and back

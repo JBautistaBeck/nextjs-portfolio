@@ -7,4 +7,5 @@ steps:
 - Click on the 'Blog' link in the navigation
 - Verify return to the blog listing page
 - Verify all blog posts are displayed in the list
-expected_result: User can return to blog list from an individual post
+expected_result: User can return to blog list from an individual post via the 'Blog'
+  navigation link

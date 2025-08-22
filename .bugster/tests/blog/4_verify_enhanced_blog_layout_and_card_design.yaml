@@ -1,0 +1,22 @@
+name: Verify enhanced blog layout and card design
+page: Blog Page
+page_path: app/blog/page.tsx
+task: Verify the new styling and layout improvements on the blog page
+steps:
+- Navigate to the blog page
+- Verify the page heading shows 'Latest Articles' with the new font-bold and text-3xl
+  styling
+- Verify the subtitle text about web development has the correct text-neutral-600
+  dark:text-neutral-400 text-lg styling
+- Verify each blog post card has the new design with rounded corners, shadow, and
+  hover effects
+- Verify each card displays the date in the top left corner
+- Verify each card shows an 'Article' tag badge in the top right corner with blue
+  styling
+- Verify each card displays the post title with proper font styling
+- Verify each card shows the post summary text with a 2-line limit
+- "Verify each card has a bottom border and 'Read more \u2192' text in blue"
+- Hover over a card and verify the shadow effect increases and title changes color
+- Click on a card and verify it navigates to '/blogs/{slug}' (not '/blog/{slug}')
+expected_result: Blog page should display an updated heading, subtitle, card design
+  with proper spacing, article tag, and correct link to blog posts

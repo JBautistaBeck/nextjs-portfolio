@@ -1,0 +1,14 @@
+name: Metadata Parsing Without Quote Comment
+page: Blog Utilities
+page_path: app/blog/utils.ts
+task: Verify front matter metadata is correctly parsed with quotes removed
+steps:
+- Mock a blog post content with front matter that includes quoted values
+- Call the function that parses front matter from the blog post
+- Verify that the metadata object has correctly parsed values with quotes removed
+- 'Check a metadata field that had quotes (e.g., title: "Example Title") to ensure
+  it returns just ''Example Title'' without quotes'
+- Verify that the comment removal does not affect the actual functionality of quote
+  removal
+expected_result: Quotes should be properly removed from metadata values without affecting
+  functionality

@@ -4,8 +4,11 @@ page_path: app/page.tsx
 task: Verify footer social links are accessible
 steps:
 - Navigate to the home page
-- Scroll to the footer section
-- Verify social media links are visible
+- Observe the updated layout with 'Welcome to My Portfolio' heading
+- Scroll past the 'Latest Posts' section in the new grid layout
+- Locate the footer section at the bottom of the page
+- Verify social media links are visible in the footer
 - Click on a social media link
 - Verify it opens in a new tab or navigates to the correct destination
 expected_result: Footer social media links are clickable and navigate to correct destinations
+  when accessed from the updated home page layout

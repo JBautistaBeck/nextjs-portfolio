@@ -1,0 +1,15 @@
+name: Properly parse YAML front matter without comment
+page: RSS Feed
+page_path: app/rss/route.ts
+task: Verify that the RSS feed correctly parses blog post metadata from YAML front
+  matter without relying on comments
+steps:
+- Navigate to the RSS feed page
+- Verify the RSS feed loads successfully
+- 'Create a test blog post with YAML front matter containing quoted values (e.g.,
+  title: "Test Post")'
+- Check that the RSS feed correctly displays the blog post title without quotes
+- Verify other metadata fields (like date and description) are also correctly parsed
+- Ensure the feed validates as proper RSS/XML format
+expected_result: The RSS feed should correctly display blog post metadata after parsing
+  YAML front matter with quoted values

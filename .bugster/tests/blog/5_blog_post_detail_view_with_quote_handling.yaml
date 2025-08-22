@@ -1,0 +1,15 @@
+name: Blog post detail view with quote handling
+page: Blog Post Detail
+page_path: app/blog/[slug]/page.tsx
+task: Verify blog post content with quoted metadata is displayed correctly
+steps:
+- Navigate to the blog page
+- Click on a blog post that has quoted metadata in its frontmatter
+- Verify the blog post detail page loads correctly
+- Verify the blog post title is displayed without surrounding quotes
+- Verify the blog post description is displayed without surrounding quotes if it had
+  quotes in frontmatter
+- Verify other metadata like date is displayed correctly
+- Verify the blog post content is displayed properly
+expected_result: Blog post metadata with quotes in frontmatter should be displayed
+  correctly with quotes removed

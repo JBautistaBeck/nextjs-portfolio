@@ -1,0 +1,16 @@
+name: Test blog article links redirect to the correct URL
+page: Home Page
+page_path: app/page.tsx
+task: Verify that blog article links redirect to the correct URL path using the new
+  URL format
+steps:
+- Navigate to the home page
+- Scroll down to the 'Latest Posts' section
+- Identify a blog post card in the grid layout
+- "Verify the blog post card has a date, 'Article' tag, title, and 'Read more \u2192\
+  ' link"
+- Click on a blog post card
+- Verify the URL changes to /blogs/{slug} format
+- Verify the blog post content loads correctly
+expected_result: Clicking on a blog post should navigate to /blogs/{slug} (new URL
+  format) instead of the old /blog/{slug} format

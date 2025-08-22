@@ -7,6 +7,7 @@ steps:
 - Click on a specific blog post title
 - Verify redirection to the blog post detail page
 - Verify blog post title is displayed
-- Verify blog post content is displayed
+- Verify blog post content is displayed with quote handling
 - Verify date information is displayed
-expected_result: Blog post page shows the full content of the selected article
+expected_result: Blog post page shows the full content of the selected article with
+  proper formatting

@@ -1,0 +1,13 @@
+name: Ensure frontmatter parsing handles quoted values correctly
+page: Blog
+page_path: app/components/posts.tsx
+task: Verify that blog post frontmatter with quoted values is correctly parsed
+steps:
+- Navigate to the blog page
+- Locate a blog post that contains frontmatter with quoted values
+- Verify the blog post displays the content without surrounding quotes
+- Check that the metadata values (title, date, etc.) are rendered properly without
+  any quote characters
+- Ensure no double quotes or single quotes appear in the displayed metadata
+expected_result: Blog posts with quoted values in their frontmatter should display
+  correctly with the quotes removed

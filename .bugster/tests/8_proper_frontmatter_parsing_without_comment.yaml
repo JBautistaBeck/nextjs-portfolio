@@ -1,0 +1,13 @@
+name: Proper frontmatter parsing without comment
+page: blog
+page_path: app/robots.ts
+task: Verify that the frontmatter parsing correctly removes quotes from values without
+  affecting functionality
+steps:
+- Navigate to a blog post page
+- Verify that a blog post with quoted values in frontmatter loads correctly
+- Check that the metadata values don't contain leading or trailing quotes
+- Verify that the blog content is displayed correctly
+- Check that metadata like title, date, and description are properly displayed
+expected_result: Blog post frontmatter values with quotes should have the quotes properly
+  removed

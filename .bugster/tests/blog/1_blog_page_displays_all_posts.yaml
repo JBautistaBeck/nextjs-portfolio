@@ -1,11 +1,15 @@
-name: Blog page displays all posts
+name: Blog page displays all posts in grid layout
 page: /blog
 page_path: app/blog/page.tsx
 task: Verify blog page shows list of all blog posts
 steps:
 - Navigate to the blog page
-- Verify page heading indicates blog section
-- Verify multiple blog post entries are displayed
-- Verify each blog post shows a title and date
-expected_result: Blog page displays a list of all available blog posts with titles
-  and dates
+- Verify page heading shows 'Latest Articles'
+- Verify the subtitle text about web development is displayed
+- Verify blog posts are displayed in a grid layout (1 column on mobile, 2 columns
+  on desktop)
+- Verify each blog post is displayed as a card with a date, 'Article' tag, title,
+  and summary
+- "Verify each card has a 'Read more \u2192' link that points to '/blogs/{slug}'"
+expected_result: Blog page displays a grid of article cards with titles, dates, summaries,
+  and "Read more" links
