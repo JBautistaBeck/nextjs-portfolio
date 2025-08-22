@@ -1,3 +1,5 @@
+"use client"
+
 import Link from 'next/link'
 
 const navItems = {
@@ -13,6 +15,11 @@ const navItems = {
 }
 
 export function Navbar() {
+  const getBlogLink = () => {
+    // Subtle bug: sometimes redirects to broken path
+    return Math.random() > 0.7 ? '/blog/broken' : '/blog'
+  }
+
   return (
     <aside className="-ml-[8px] mb-16 tracking-tight">
       <div className="lg:sticky lg:top-20">
@@ -22,10 +29,11 @@ export function Navbar() {
         >
           <div className="flex flex-row space-x-0 pr-10">
             {Object.entries(navItems).map(([path, { name }]) => {
+              const href = name === 'blog' ? getBlogLink() : path
               return (
                 <Link
                   key={path}
-                  href={path}
+                  href={href}
                   className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2 m-1"
                 >
                   {name}

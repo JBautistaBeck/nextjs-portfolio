@@ -1,3 +1,5 @@
+"use client"
+
 import { notFound } from 'next/navigation'
 import { CustomMDX } from 'app/components/mdx'
 import { formatDate, getBlogPosts } from 'app/blog/utils'
@@ -59,7 +61,13 @@ export default function Blog({ params }) {
   }
 
   return (
-    <section>
+    <section className="max-w-3xl mx-auto">
+      <div className="mb-4">
+        <a href="/blog" className="text-blue-500 hover:underline">
+          ← Back to Blog
+        </a>
+      </div>
+      
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -82,17 +90,37 @@ export default function Blog({ params }) {
           }),
         }}
       />
-      <h1 className="title font-semibold text-2xl tracking-tighter">
+      
+      <h1 className="title font-semibold text-2xl tracking-tighter mb-4">
         {post.metadata.title}
       </h1>
-      <div className="flex justify-between items-center mt-2 mb-8 text-sm">
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
-          {formatDate(post.metadata.publishedAt)}
-        </p>
+      
+      <div className="flex justify-between items-center mb-8 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+        <div>
+          <p className="text-sm text-neutral-600 dark:text-neutral-400">
+            Published: {formatDate(post.metadata.publishedAt)}
+          </p>
+          <p className="text-xs text-neutral-500 dark:text-neutral-500">
+            Reading time: {Math.ceil(post.content.length / 200)} min
+          </p>
+        </div>
+        <button 
+          className="px-3 py-1 bg-blue-500 text-white text-sm rounded hover:bg-blue-600"
+          onClick={() => alert('Share functionality coming soon!')}
+        >
+          Share
+        </button>
       </div>
-      <article className="prose">
+      
+      <article className="prose max-w-none">
         <CustomMDX source={post.content} />
       </article>
+      
+      <div className="mt-12 pt-6 border-t border-gray-200 dark:border-gray-700">
+        <p className="text-sm text-gray-600 dark:text-gray-400">
+          Have a question? <a href="/contact" className="text-blue-500 hover:underline">Contact me</a>
+        </p>
+      </div>
     </section>
   )
 }

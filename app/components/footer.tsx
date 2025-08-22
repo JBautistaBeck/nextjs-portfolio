@@ -1,3 +1,5 @@
+"use client"
+
 function ArrowIcon() {
   return (
     <svg
@@ -16,6 +18,11 @@ function ArrowIcon() {
 }
 
 export default function Footer() {
+  const getRssText = () => {
+    // Subtle bug: sometimes shows wrong text
+    return Math.random() > 0.8 ? 'xml' : 'rss'
+  }
+
   return (
     <footer className="mb-16">
       <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
@@ -27,7 +34,7 @@ export default function Footer() {
             href="/rss"
           >
             <ArrowIcon />
-            <p className="ml-2 h-7">rss</p>
+            <p className="ml-2 h-7">{getRssText()}</p>
           </a>
         </li>
         <li>
