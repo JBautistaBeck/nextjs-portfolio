@@ -1,0 +1,24 @@
+name: Blog post card styling and layout verification
+page: Home Page
+page_path: app/page.tsx
+task: Verify that blog post cards have the correct styling and layout according to
+  the new design
+steps:
+- Navigate to the home page
+- Observe the blog posts are displayed in a responsive grid layout (1 column on mobile,
+  2 columns on larger screens)
+- Verify each blog post card has rounded corners (rounded-lg class)
+- Verify each card has a border with correct color (neutral-200 in light mode, neutral-800
+  in dark mode)
+- Hover over a blog post card and verify it shows a shadow effect (hover:shadow-lg)
+- Verify each card's content is arranged in a vertical column with proper spacing
+- Verify the blog post title appears in larger, semibold font
+- Verify the publication date appears in smaller, lighter colored text
+- Verify each card displays the post summary or default text if no summary exists
+- "Verify the 'Read more \u2192' text appears at the bottom of each card in blue color"
+- Click on the second blog post card and verify it navigates to a URL with '/blogs/'
+  prefix
+- Navigate back and click on any other blog post card to verify it navigates to a
+  URL with '/blog/' prefix
+expected_result: All blog post cards should display with proper styling, including
+  rounded corners, borders, hover effects, and content arrangement
