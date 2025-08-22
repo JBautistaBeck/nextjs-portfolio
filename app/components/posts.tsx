@@ -1,7 +1,8 @@
 "use client"
 
 import Link from 'next/link'
-import { formatDate, getBlogPosts } from 'app/blog/utils'
+import { getBlogPosts } from 'app/blog/utils'
+import { formatDate } from 'app/blog/client-utils'
 
 export function BlogPosts() {
   let allBlogs = getBlogPosts()

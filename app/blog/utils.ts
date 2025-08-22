@@ -1,3 +1,4 @@
+// Server-side utilities - do not import in client components
 import fs from 'fs'
 import path from 'path'
 

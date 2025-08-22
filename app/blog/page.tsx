@@ -1,6 +1,5 @@
-"use client"
-
 import { BlogPosts } from 'app/components/posts'
+import { BlogHeader } from './blog-header'
 
 export const metadata = {
   title: 'Blog',
@@ -12,20 +11,8 @@ export default function Page() {
     <section className="max-w-4xl mx-auto px-4">
       <h1 className="font-semibold text-2xl mb-8 tracking-tighter">My Blog</h1>
       
-      <div className="mb-6">
-        <input 
-          type="text" 
-          placeholder="Search posts..." 
-          className="w-full p-2 border border-gray-300 rounded-md"
-          disabled
-        />
-        <p className="text-xs text-gray-500 mt-1">Search functionality coming soon</p>
-      </div>
-
-      <div className="mb-4">
-        <span className="text-sm text-gray-600">Showing {Math.floor(Math.random() * 10) + 3} posts</span>
-      </div>
-
+      <BlogHeader />
+      
       <BlogPosts />
       
       <div className="mt-8 text-center">

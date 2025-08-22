@@ -1,6 +1,6 @@
 "use client"
 
-import { formatDate } from 'app/blog/utils'
+import { formatDate } from 'app/blog/client-utils'
 
 export function BlogPostContent({ post }) {
   return (
