@@ -1,0 +1,16 @@
+name: Test blog post "Read more" link redirects to the correct article page
+page: Blog
+page_path: app/blog/page.tsx
+task: Verify that clicking on the "Read more" link for a blog post correctly redirects
+  to the appropriate article page
+steps:
+- Navigate to the blog page
+- Find the second blog post in the grid
+- "Click on the 'Read more \u2192' link for this post"
+- Verify the URL contains '/blogs/' instead of '/blog/'
+- Navigate back to the blog page
+- Find the first blog post in the grid
+- "Click on the 'Read more \u2192' link for this post"
+- Verify the URL contains '/blog/' path
+expected_result: User should be redirected to the correct blog post page based on
+  its index (second post uses /blogs/ URL pattern, others use /blog/)

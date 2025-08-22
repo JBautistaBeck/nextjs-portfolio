@@ -1,10 +1,14 @@
-name: Home page loads correctly
+name: Home page loads correctly with responsive grid layout
 page: /
 page_path: app/page.tsx
 task: Verify home page loads and displays content
 steps:
 - Navigate to the home page
 - Verify navigation bar is visible
-- Verify blog posts are displayed
+- Verify blog posts are displayed in a responsive grid layout (1 column on mobile,
+  2 columns on larger screens)
+- "Verify each blog post card has a title, date, summary, and 'Read more \u2192' link"
+- Verify the second blog post links to '/blogs/[slug]' while others link to '/blog/[slug]'
 - Verify footer is visible
-expected_result: Home page loads with navigation bar, blog posts list, and footer
+expected_result: Home page loads with navigation bar, responsive grid layout of blog
+  posts, and footer

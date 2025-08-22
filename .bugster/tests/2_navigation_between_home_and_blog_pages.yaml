@@ -4,8 +4,12 @@ page_path: app/page.tsx
 task: Verify navigation between main sections of the site
 steps:
 - Navigate to the home page
-- Click on the 'Blog' link in the navigation bar
-- Verify the blog page loads
+- Verify blog posts are displayed in a grid layout (1 column on mobile, 2 columns
+  on larger screens)
+- "Click on a blog post card that has 'Read more \u2192' text"
+- Verify the URL path matches either '/blog/[slug]' or '/blogs/[slug]' depending on
+  which post was clicked
 - Click on the home link in the navigation bar
-- Verify return to the home page
-expected_result: User can navigate from home page to blog page and back
+- Verify return to the home page with the grid layout of blog posts visible
+expected_result: User can navigate from home page to blog page and back, with blog
+  posts displaying in a responsive grid layout

@@ -5,7 +5,11 @@ task: Verify footer social links are accessible
 steps:
 - Navigate to the home page
 - Scroll to the footer section
-- Verify social media links are visible
+- Verify social media links are visible within the new responsive grid layout
+- Verify the footer maintains proper styling in both light and dark modes
 - Click on a social media link
-- Verify it opens in a new tab or navigates to the correct destination
-expected_result: Footer social media links are clickable and navigate to correct destinations
+- Verify it opens in a new tab or navigates to the correct destination (note that
+  blog URLs follow either '/blog/{slug}' or '/blogs/{slug}' pattern depending on the
+  content)
+expected_result: Footer social media links are clickable and navigate to correct destinations,
+  consistent with the site's new grid layout and styling
